@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'digest/md5'
 
-email_address = ARGV[1]
+email_address = ARGV[1].downcase
 hash = Digest::MD5.hexdigest(email_address)
 puts "The MD5 hash of this email address is: #{hash}"
 

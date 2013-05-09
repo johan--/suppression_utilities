@@ -12,7 +12,7 @@ while (line = input_file.gets)
   counter = counter + 1
   puts "Processed #{counter} lines.\n" if (counter % 1000 == 0) 
 
-  line.chomp!
+  line.chomp!.downcase!
   hash = Digest::MD5.hexdigest(line)
   output_file.write hash+"\n"
 end
